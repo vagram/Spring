@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="engine" class="spring.example.ioc.sources.Engine">
+
+    </bean>
+    <bean id="carBody" class="spring.example.ioc.sources.CarBody">
+
+    </bean>
+    <bean id="wheel" class="spring.example.ioc.sources.Wheel">
+
+    </bean>
+    <bean id="name" class="spring.example.ioc.sources.Name">
+
+    </bean>
+    <bean id="gearBoxAT" class="spring.example.ioc.sources.GearBoxAT">
+
+    </bean>
+
+    <bean id="carAt" class="spring.example.ioc.sources.CarAT">
+        <constructor-arg name="engine" ref="engine"/>
+        <constructor-arg name="carBody" ref="carBody"/>
+        <constructor-arg name="wheel" ref="wheel"/>
+        <constructor-arg name="name" ref="name"/>
+        <constructor-arg name="gearBoxAT" ref="gearBoxAT">
+
+        </constructor-arg>
+    </bean>
+
+</beans>
